@@ -1,4 +1,4 @@
-package com.bdjpa.db_jpa.REST;
+package com.bdjpa.db_jpa.REST_testes;
 
 public class email_objeto {
     private String toEmail;

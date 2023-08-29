@@ -1,4 +1,4 @@
-package com.bdjpa.db_jpa.REST;
+package com.bdjpa.db_jpa.REST_testes;
 
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -16,6 +16,6 @@ public class rest_email_test {
 
         email e_mail = new email();
         e_mail.sendEmail(o_email.getToEmail(), o_email.getSubject(), o_email.getBody());
-        
+
     }
 }
