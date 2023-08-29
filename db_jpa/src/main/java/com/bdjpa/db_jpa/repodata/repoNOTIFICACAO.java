@@ -7,7 +7,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
 import com.bdjpa.db_jpa.modal.NOTIFICACAO;
-import com.bdjpa.db_jpa.modal.PROCESSO;
+
 
 public interface repoNOTIFICACAO extends JpaRepository<NOTIFICACAO,Integer>{
     @Query("SELECT n FROM NOTIFICACAO n JOIN PARTE p ON n.n_processo = p.n_processo " +
@@ -18,5 +18,5 @@ public interface repoNOTIFICACAO extends JpaRepository<NOTIFICACAO,Integer>{
     List<NOTIFICACAO> findNotificacoesCEP();
 
     @Query("SELECT n FROM NOTIFICACAO n WHERE n.n_processo = :processo")
-    PROCESSO findnotificacao(@Param("processo") String processo);
+    NOTIFICACAO findnotificacao(@Param("processo") String processo);
 }
