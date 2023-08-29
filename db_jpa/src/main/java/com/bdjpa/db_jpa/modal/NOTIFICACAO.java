@@ -3,13 +3,12 @@ package com.bdjpa.db_jpa.modal;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 @Entity
 public class NOTIFICACAO {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue
     private int id_notificacao;
     @Column(nullable = false)
     private String n_processo;
