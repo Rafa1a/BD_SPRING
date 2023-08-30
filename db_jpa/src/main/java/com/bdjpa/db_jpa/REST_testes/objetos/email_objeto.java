@@ -24,5 +24,5 @@ public class email_objeto {
         this.body = body;
     }
 
-    
+     
 }
