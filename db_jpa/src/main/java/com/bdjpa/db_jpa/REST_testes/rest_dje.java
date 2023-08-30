@@ -21,6 +21,7 @@ import com.bdjpa.db_jpa.repodata.repoPARTE;
 
 @RestController
 @RequestMapping("/dje")
+
 public class rest_dje {
     
     @Autowired
