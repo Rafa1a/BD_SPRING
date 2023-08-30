@@ -2,16 +2,16 @@ package com.bdjpa.db_jpa.REST_testes.objetos;
 
 public class noti_objeto {
     
-    private String n_processo;
+    private int id_notificacao;
 
     private String status ;
 
-    public String getN_processo() {
-        return n_processo;
+    public int getId_notificacao() {
+        return id_notificacao;
     }
 
-    public void setN_processo(String n_processo) {
-        this.n_processo = n_processo;
+    public void setId_notificacao(int id_notificacao) {
+        this.id_notificacao = id_notificacao;
     }
 
     public String getStatus() {
@@ -20,7 +20,8 @@ public class noti_objeto {
 
     public void setStatus(String status) {
         this.status = status;
-    } 
+    }
 
+    
 
 }
