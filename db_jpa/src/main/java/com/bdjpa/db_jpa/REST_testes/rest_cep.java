@@ -1,5 +1,6 @@
 package com.bdjpa.db_jpa.REST_testes;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,7 +11,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.bdjpa.db_jpa.REST_testes.objetos.ViaCepResponse;
+import com.bdjpa.db_jpa.REST_testes.objetos.noti_cep_objeto;
 import com.bdjpa.db_jpa.REST_testes.objetos.noti_objeto;
+import com.bdjpa.db_jpa.functions.ceprequest;
 import com.bdjpa.db_jpa.modal.NOTIFICACAO;
 import com.bdjpa.db_jpa.modal.PARTE;
 import com.bdjpa.db_jpa.repodata.repoNOTIFICACAO;
@@ -32,8 +36,44 @@ public class rest_cep {
     private repoPARTE repop ;
 
     @GetMapping
-    public List<NOTIFICACAO> listar() {
-        return repon.findNotificacoesCEP();
+    public List<noti_cep_objeto> listar() {
+
+        List<NOTIFICACAO> listanoti = repon.findNotificacoesCEP();
+        List<noti_cep_objeto> notificacoesPendentes = new ArrayList<>();
+
+        for (NOTIFICACAO notificacao : listanoti) {
+            //notificacao dados
+            int     id_notificacao  = notificacao.getId_notificacao();
+            String nprocesso        = notificacao.getN_processo();
+            String  statuss         = notificacao.getStatuss();
+            String  motivo          = notificacao.getMotivo_de_notificacao();
+            //parte dados
+            PARTE part              = repop.findparte(nprocesso);
+            String cep              = part.getCep();
+            String numero           = part.getNumero();
+            //requisicao
+            ceprequest resquest     = new ceprequest();
+            ViaCepResponse response = resquest.cep(cep);
+            //setar valores capturados
+            noti_cep_objeto noti_cep = new noti_cep_objeto();
+            noti_cep.setId_notificacao(id_notificacao);
+            noti_cep.setN_processo(nprocesso);
+            noti_cep.setStatuss(statuss);
+            noti_cep.setMotivo_de_notificacao(motivo);
+            noti_cep.setCep(cep);
+            noti_cep.setNumero(numero);
+            noti_cep.setLogradouro(response.getLogradouro());
+            noti_cep.setComplemento(response.getComplemento());
+            noti_cep.setBairro(response.getBairro());
+            noti_cep.setLocalidade(response.getLocalidade());
+            noti_cep.setUf(response.getUf());
+
+            notificacoesPendentes.add(noti_cep);
+            
+        }
+
+        return notificacoesPendentes;
+        
     }
     @PutMapping
     public ResponseEntity<String> alterar (@RequestBody noti_objeto noti) {

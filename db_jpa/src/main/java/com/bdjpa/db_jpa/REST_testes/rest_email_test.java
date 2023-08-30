@@ -46,10 +46,15 @@ public class rest_email_test {
                 noti.setMotivo_de_notificacao(motivo);
 
                 email e_mail = new email();
-                e_mail.sendEmail(email, tribunal, motivo);
+                boolean emailSent = e_mail.sendEmail(email, tribunal, motivo);
 
-                repon.save(noti);
-                return ResponseEntity.ok("email enviado");
+                if (emailSent) {
+                    repon.save(noti);
+                    return ResponseEntity.ok("E-mail enviado");
+                } else {
+                    return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Erro ao enviar o e-mail");
+                }
+                
             } else if (cep != null && numero != null){
                 NOTIFICACAO noti = new NOTIFICACAO();
                 noti.setN_processo(n_processo);

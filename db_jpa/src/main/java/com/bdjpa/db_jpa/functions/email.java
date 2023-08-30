@@ -13,7 +13,7 @@ import javax.mail.internet.MimeMessage;
 
 public class email {
 
-    public void sendEmail(String toEmail, String subject, String body) {
+    public Boolean sendEmail(String toEmail, String subject, String body) {
         // Configurações do servidor SMTP do Gmail
         String host = "smtp.gmail.com";
         String port = "587"; // Porta TLS
@@ -48,9 +48,11 @@ public class email {
             // Envio do e-mail
             Transport.send(message);
             System.out.println("E-mail enviado com sucesso para: " + toEmail);
+            return true;
         } catch (MessagingException e) {
             e.printStackTrace();
             System.err.println("Erro ao enviar o e-mail.");
+            return false;
         }
     }
 }
