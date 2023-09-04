@@ -46,10 +46,11 @@ paths:
             schema:
               type: object
               properties:
-                status:
-                  type: string
                 id_notificacao:
                   type: integer
+                status:
+                  type: string
+                
       responses:
         '200':
           description: OK
