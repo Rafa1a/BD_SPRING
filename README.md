@@ -88,7 +88,7 @@ Sinta-se à vontade para contribuir com este projeto. Se você encontrar problem
 - Wallace Felipe Tavares Moreira `Identificação Faculdadade`:202109237331
 - Ruan
 - Maiara
-- Alarcon
+- Rodrigo de Oliveira Alarcon
 - Mari
 
 ## Licença
