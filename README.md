@@ -86,11 +86,10 @@ Sinta-se à vontade para contribuir com este projeto. Se você encontrar problem
 
 - Rafael Leal Altero `Identificação Faculdadade`:202205021882
 - Wallace Felipe Tavares Moreira `Identificação Faculdadade`:202109237331
-- Ruan
-- Maiara
-- Rodrigo de Oliveira Alarcon
-- Mari
-
+- Ruan Hernandes Finamor Correia `Identificação Faculdadade`:202208175252
+- Maiara Accacio Machado `Identificação Faculdadade`:202204268183
+- Rodrigo de Oliveira Alarcon `Identificação Faculdadade`:202204482321
+- Mariana Lucas Fernandes Onorio `Identificação Faculdadade`:202204465469
 ## Licença
 
 Este projeto está licenciado sob a Licença MIT - consulte o arquivo [LICENSE](LICENSE) para obter detalhes.
