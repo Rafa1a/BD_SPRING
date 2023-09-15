@@ -85,7 +85,7 @@ Sinta-se à vontade para contribuir com este projeto. Se você encontrar problem
 ## Autores
 
 - Rafael Leal Altero `Identificação Faculdadade`:202205021882
-- Wallace Tavarez `Identificação Faculdadade`:202109237331
+- Wallace Felipe Tavares Moreira `Identificação Faculdadade`:202109237331
 - Ruan
 - Maiara
 - Alarcon
