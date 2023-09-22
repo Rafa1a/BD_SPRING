@@ -17,8 +17,8 @@ public class email {
         // Configurações do servidor SMTP do Gmail
         String host = "smtp.gmail.com";
         String port = "587"; // Porta TLS
-        String username = "rafa.altero@gmail.com";
-        String password = "mgxrwdvblvtbggfj";
+        String username = "rafa.test@gmail.com";
+        String password = "sua senha aqui";
 
         // Propriedades
         Properties props = new Properties();
