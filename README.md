@@ -59,24 +59,24 @@ Estas instruções ajudarão você a configurar e executar a API em sua máquina
 
 1. Clone este repositório:
 
-https://github.com/Rafa1a/CadastroCliente_Servidor
+https://github.com/Rafa1a/BD_SPRING
 
 
 2. Navegue até o diretório do projeto:
 
-cd CadastroCliente_Servidor
+cd db_jpa
 
-3. Configure as informações do banco de dados no arquivo `application.properties`.
+3. Configure as informações do banco de dados no arquivo [application.properties](./db_jpa/src/main/resources/application.properties).
 
 4. Execute o aplicativo:
 
-indo em Spring Boot DashBoard run.
+indo em `Spring Boot DashBoard` run. Instale em `Extensions`
 
 O aplicativo estará rodando em `http://localhost:8080`.
 
 ## Documentação da API
 
-A documentação da API pode ser acessada após a instalação de uma extensão para leitura de arquivos YAML/JSON, como o OpenAPI Swagger no Visual Studio Code.
+A documentação da API pode ser acessada após a instalação de uma extensão para leitura de arquivos YAML/JSON, como o OpenAPI Swagger no Visual Studio Code. [Documentação](./db_jpa/src/main/java/com/bdjpa/db_jpa/documentacao/documentacao.yml)
 
 ## Contribuindo
 

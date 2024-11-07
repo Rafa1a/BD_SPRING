@@ -1,0 +1,3 @@
+apis:
+  db_jpa/src/main/java/com/bdjpa/db_jpa/documentacao/documentacao.yml:
+    alias: api-de-notifica-es

@@ -17,6 +17,7 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/noti_cep_objeto'
+    # Lembre-se de colocar o id correto que esta no banco de dados...
     put:
       summary: Altera o status de uma notificação com base no ID
       requestBody:
@@ -37,6 +38,7 @@ paths:
       responses:
         '200':
           description: OK
+    # Lembre-se de colocar o id correto que esta no banco de dados...
     put:
       summary: Alterar status de notificação
       requestBody:
@@ -50,6 +52,7 @@ paths:
                   type: integer
                 status:
                   type: string
+                  enum: ["pendente", "enviado"]
                 
       responses:
         '200':
@@ -59,6 +62,7 @@ paths:
         '409':
           description: Processo já foi enviado ou possui dados adicionais
   /notificacao:
+  # O numero do processo precisa existir no Banco de dados do contrário retorna um error 500...
     post:
       summary: Envia uma notificação
       requestBody:
@@ -84,6 +88,7 @@ components:
           type: string
         statuss:
           type: string
+          enum: ["pendente", "enviado"]
         motivo_de_notificacao:
           type: string
         cep:
@@ -107,6 +112,7 @@ components:
           type: integer
         status:
           type: string
+          enum: ["pendente", "enviado"]
     notificacao_post_objeto:
       type: object
       properties:
